@@ -28,10 +28,10 @@ handlers:
     secure: always # 強制使用 HTTPS
 
   # Google Search Console 驗證檔案
-  - url: /googlebf33f71178246caa.html
-    static_files: dist/googlebf33f71178246caa.html
-    upload: dist/googlebf33f71178246caa.html
-    secure: always # 強制使用 HTTPS
+  # - url: /googlebf33f71178246caa.html
+  #   static_files: dist/googlebf33f71178246caa.html
+  #   upload: dist/googlebf33f71178246caa.html
+  #   secure: always # 強制使用 HTTPS
 
   # 預設處理器 - 處理所有其他請求
   - url: /.*
