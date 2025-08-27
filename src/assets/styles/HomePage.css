@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'The Peak Font';
+  src: url('@/assets/styles/fonts/ThePeakFontBeta_V0_102.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'masafont-Regular';
+  src:
+    url('@/assets/styles/fonts/MasaFont-Bold.woff2') format('woff2'),
+    url('@/assets/styles/fonts/MasaFont-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Iansui Regular';
+  src: url('@/assets/styles/fonts/Iansui-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSerifTC-ExtraLight';
+  src: url('@/assets/styles/fonts/NotoSerifTC-ExtraLight.ttf') format('truetype');
+  font-display: swap;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* background: #fdfcf6; */
+}
+
+.logo {
+  height: 64px;
+  margin-bottom: 0.5rem;
+}
+.logo-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'masafont-Regular', 'Noto Serif TC', serif;
+}
+.ch-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #000;
+  line-height: 1;
+}
+.en-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: #222;
+  margin-top: 0.2rem;
+}

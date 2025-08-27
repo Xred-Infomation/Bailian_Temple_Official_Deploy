@@ -1,0 +1,40 @@
+# Google App Engine 設定檔
+# 定義應用程式的環境、運行時、服務名稱和擴展設定
+
+# 執行環境設定
+env: standard # 使用 Google App Engine 標準環境
+runtime: nodejs20 # 使用 Node.js 20 版本作為運行時
+service: www # 服務名稱為 www
+
+# 實例類型設定
+instance_class: F1 # 使用 F1 實例類型（免費層）
+
+# 自動擴展設定
+automatic_scaling:
+  max_instances: 1 # 最多只允許 1 個實例
+  max_idle_instances: 1 # 最多保持 1 個閒置實例
+  min_instances: 0 # 最少 0 個實例（無流量時可完全關閉）
+  min_idle_instances: 0 # 最少 0 個閒置實例
+
+# 環境變數設定
+env_variables:
+  TZ: Asia/Taipei # 設定時區為台北時間
+
+# 請求處理器設定
+handlers:
+  # 靜態資源處理
+  - url: /assets
+    static_dir: dist/assets # 將 /assets 請求指向 dist/assets 目錄
+    secure: always # 強制使用 HTTPS
+
+  # Google Search Console 驗證檔案
+  - url: /googlebf33f71178246caa.html
+    static_files: dist/googlebf33f71178246caa.html
+    upload: dist/googlebf33f71178246caa.html
+    secure: always # 強制使用 HTTPS
+
+  # 預設處理器 - 處理所有其他請求
+  - url: /.*
+    static_files: dist/index.html # 所有路徑都返回 dist/index.html（用於 SPA 路由）
+    upload: dist/index.html # 上傳的文件匹配規則
+    secure: always # 強制使用 HTTPS

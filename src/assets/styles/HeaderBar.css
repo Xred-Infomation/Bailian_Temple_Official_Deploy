@@ -1,0 +1,314 @@
+.n-marquee {
+  background-color: #f1e7e5;
+}
+
+.menu-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: #f9f9f7;
+  padding: 0 0;
+  border-top: 1.5px solid #e5d6e9;
+}
+.menu-bar-inner {
+  border-bottom: 1.5px solid #e5d6e9;
+  width: 90%;
+  margin: 0 auto !important;
+}
+.menu-bar-inner > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-evenly;
+}
+
+.menu-bar-inner > div > div > div a {
+  position: relative;
+  padding: 0 12px;
+  transition: color 0.3s;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'The Peak Font', 'Noto Serif TC', serif;
+}
+.menu-bar-inner > div > div > div a::before,
+.menu-bar-inner > div > div > div a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+}
+/* 左側小圖案 */
+.menu-bar-inner > div > div > div a::before {
+  left: -8px !important;
+  background-image: url('@/assets/images/icon_lotus.png');
+  top: 6px !important;
+}
+
+/* 右側小圖案 */
+.menu-bar-inner > div > div > div a::after {
+  right: -8px !important;
+  background-image: url('@/assets/images/icon_lotus.png');
+}
+.menu-bar > div a:hover {
+  border-bottom: 2px solid #e5d6e9;
+}
+.menu-bar > div a:hover::before,
+.menu-bar > div a:hover::after {
+  opacity: 1;
+}
+
+/******************/
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-bottom: 1px solid #ffffff;
+}
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-evenly;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: #f9f9f7;
+  padding: 16px 0;
+}
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #e5d6e9;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 0.8px;
+  background-color: #e5d6e9;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.navbar li a {
+  position: relative;
+  padding: 0 12px;
+  transition: color 0.3s;
+  text-decoration: none;
+  color: inherit;
+  /* font-family: 'The Peak Font', 'Noto Serif TC', serif; */
+  font-family: 'NotoSerifTC-ExtraLight', 'Noto Serif TC', serif;
+  font-weight: 600;
+  font-size: medium;
+}
+.navbar li a::before,
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+}
+/* 左側小圖案 */
+.navbar li a::before {
+  left: -8px;
+  background-image: url('@/assets/images/icon_lotus.png');
+}
+
+/* 右側小圖案 */
+.navbar li a::after {
+  right: -8px;
+  background-image: url('@/assets/images/icon_lotus.png');
+}
+.navbar li a:hover {
+  border-bottom: 2px solid #e5d6e9;
+}
+.navbar li a:hover::before,
+.navbar li a:hover::after {
+  opacity: 1;
+}
+
+.logo-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 讓內容水平置中 */
+  padding: 1rem 1rem;
+  height: 60px; /* 可調整 */
+  width: 100%;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* 移除預設底線 */
+  color: inherit; /* 保持文字顏色一致 */
+}
+.logo-center {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.right-group {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  bottom: 1rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  margin: 4px auto;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger span.open:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger span.open:nth-child(2) {
+  opacity: 0;
+}
+.hamburger span.open:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 900px) {
+  /* 漢堡選單展開後的 navbar 樣式 (這部分保持不變) */
+  .navbar {
+    position: absolute;
+    /* 這裡的 top 值需要等於上方 logo-bar 的高度，您的高度是 60px + 上下 padding */
+    /* 您的 logo-bar height 是 60px，padding 是 0.5rem (8px)，所以總高約 76px */
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+  .navbar.open {
+    display: flex;
+  }
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+  .navbar li:last-child {
+    border-bottom: none;
+  }
+
+  /* ======== 以下是針對 HeaderBar 的 RWD 修正 ======== */
+
+  .logo-bar {
+    /* justify-content: space-between; <--- REMOVED THIS LINE */
+    position: relative;
+    padding: 0.5rem 1rem;
+  }
+
+  .right-group {
+    position: static;
+    transform: none;
+    margin-left: auto; /* ADDED THIS LINE to push the group to the right */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .logo-center {
+    /* Reduce the space between the logo and the text block on mobile */
+    gap: 0.4rem;
+  }
+
+  .logo-text {
+    /* Change text layout from horizontal to vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align text vertically in the middle */
+    align-items: flex-start; /* Align text to the left */
+  }
+
+  .logo-text .ch-title,
+  .logo-text .en-title {
+    white-space: nowrap;
+    line-height: 1.2; /* Adjust line spacing for stacked text */
+  }
+
+  .logo-text .ch-title {
+    font-size: 1rem; /* 16px */
+  }
+
+  .logo-text .en-title {
+    font-size: 1rem; /* ~13px */
+  }
+}

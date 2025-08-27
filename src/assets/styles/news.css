@@ -1,0 +1,76 @@
+.news-detail-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.news-detail-card {
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.news-header {
+  margin-bottom: 24px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.news-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.title-line {
+  border: none;
+  height: 2px;
+  background-color: #444;
+  margin: 8px 0 0 0;
+  width: 100%;
+}
+
+.news-content {
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+/* 強制圖片寬度不超出父容器，避免被 html 的 width 屬性覆蓋 */
+.news-content figure.image {
+  max-width: 100%;
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+}
+
+.news-content figure.image img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important; /* 覆蓋行內 aspect-ratio */
+  display: inline-block;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 16px;
+  font-size: 18px;
+  color: #999;
+}
