@@ -31,3 +31,8 @@ coverage
 
 .env
 .env.* 
+
+.gcloudignore
+.editorconfig
+.prettierrc.json
+.gitattributes
